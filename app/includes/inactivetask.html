@@ -1,0 +1,35 @@
+<div class="panel panel-danger">
+                            <div class="panel-heading">
+                                In-active task
+                            </div>
+                           <div class="panel-body">
+                                <p ng-show="(todos | todofilter:true).length< 1">You currently have no inactive tasks</p>
+                                <div ng-show="(todos | todofilter:true).length > 0" class="table-responsive">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												
+												<th>Task</th>
+												<th>Date</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="task in todos | filter:completed">
+												
+												<td>{{task.name}}</td>
+												<td>
+													{{task.date}}
+												</td>
+												<td><a ng-click="deletetask(task)" class="btn btn-sm btn-danger">Delete</a>
+												<a ng-click="donetask(task)" class="btn btn-sm btn-primary">Undo</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                            <div class="panel-footer">
+                               
+                            </div>
+                        </div>
+                    </div>

@@ -1,0 +1,35 @@
+<div class="panel panel-success">
+                            <div class="panel-heading">
+                                Pending Task
+                            </div>
+                            <div class="panel-body">
+                                <p ng-show="(todos | todofilter:false).length< 1">You currently have no active tasks</p>
+                                <div ng-show="(todos | todofilter:false).length > 0" class="table-responsive">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												
+												<th>Task</th>
+												<th>Date</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="task in todos | filter: pending">
+												
+												<td>{{task.name}}</td>
+												<td>
+													{{task.date}}
+												</td>
+												<td><a ng-click="donetask(task)" class="btn btn-sm btn-primary">Done</a>
+												<a ng-click="deletetask(task)" class="btn btn-sm btn-danger">Delete</a></td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+                            </div>
+                            <div class="panel-footer">
+                               
+                            </div>
+    </div>

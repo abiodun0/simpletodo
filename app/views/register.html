@@ -1,0 +1,79 @@
+<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-9 col-lg-offset-3">
+					<div class="alert-placeholder"></div>
+					<div class="panel panel-success">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-12">
+								<p class="text-danger">{{errormsg}}</p>
+
+									<div class="text-center"><h2><b>Register</b></h2></div>
+									<form  novalidate name="regform">
+										<div class="form-group has-feedback">
+											<label for="username">Username</label>
+											<span class="form-control-feedback input-validator-feedback" data-fieldname="username"></span>
+											<input type="text" ng-model="username" minlength="4" name="username" id="username" tabindex="1" class="form-control validate-input" placeholder="Username" value="" required>
+										</div>
+										<p class="text-danger" ng-show="regform.username.$dirty && regform.username.$invalid"> Please enter a valid user name/ Username must be more than 3 characters </p>
+										<div class="form-group has-feedback">
+											<label for="email">Email Address</label>
+											<span class="form-control-feedback input-validator-feedback" data-fieldname="email"></span>
+											<input type="email" ng-model="email" name="email" id="email" tabindex="2" class="form-control validate-input" placeholder="Email Address" value="" required>
+										</div>
+										<p class="text-danger" ng-show="regform.email.$dirty && regform.email.$invalid"> Please enter a valid email </p>
+										<div class="form-group">
+											<label for="password">Password</label>
+											<input type="password" ng-model="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password" required>
+										</div>
+										<div class="form-group">
+											<label for="confirm-password">Confirm Password</label>
+											<input type="password" validate-equals="password" ng-model="confirm_password" name="confirm_password" tabindex="4" id="confirm-password" class="form-control" placeholder="Confirm Password" required>
+										</div>
+										<p class="text-danger" ng-show="regform.confirm_password.$dirty && regform.confirm_password.$invalid"> your password do not match</p>
+										<div class="form-group">
+
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+											<input type="submit"  name="register-submit" ng-click="register()" id="register-submit" tabindex="5" class="form-control btn btn-success" ng-disabled="regform.$invalid" value="Register">
+												</div>
+											</div>
+								
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="text-center">
+														<a href="#/login" tabindex="5" class="form-control btn btn-link">Login</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3">
+					<div class="panel panel-default dropshadow">
+						<div class="panel-body">
+							<div>
+								<div class="text-center"><h4>A todo App </h4></div>
+								<div>Something to help you organize your task<li>Tick them and more</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+	<div class="col-lg-12">
+		<div class="text-center" style="margin-top:25px;">
+		
+		</div>
+	</div>
+</div>
+		</div>

@@ -1,0 +1,67 @@
+<div class="container">
+			<div class="row">
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+					<div class="alert-placeholder"></div>
+					<div class="panel panel-success">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-12">
+								<p class="text-danger">{{errormsg}}</p>
+									<div class="text-center"><h2><b>Log In</b></h2></div>
+									<form navalidate name="loginform">
+										<div class="form-group">
+											<label for="username">Username</label>
+											<input type="text" ng-model="username" minlength="4" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off" required>
+										</div>
+										<p class="text-danger" ng-show="loginform.username.$dirty && loginform.username.$invalid"> enter valid user name...</p>
+										<div class="form-group">
+											<label for="password">Password</label>
+											<input type="password" ng-model="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+										</div>
+										<p class="text-danger" ng-show="loginform.password.$dirty && loginform.password.$invalid"> enter your password...</p>
+										
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+													<input ng-click="login()" type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In" ng-disabled="loginform.$invalid">
+													<img id="spinner" ng-src="images/spinner.gif" style="display:none;">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="text-center">
+														<a href="#/register" tabindex="5" class="form-control btn btn-link">Register</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default dropshadow">
+						<div class="panel-body">
+							<div>
+								<div class="text-center"><h4>A todo App </h4></div>
+								<div>Something to help you organize your task<li>Tick them and more</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+	<div class="col-lg-12">
+		
+		</div>
+	</div>
+</div>
+		</div>
