@@ -3,7 +3,7 @@ angular.module('todoapp').factory('todoUser',todoUser);
 
 
 
-function todoUser($http,$state,$rootScope){
+function todoUser($http,$state,$rootScope,alertService){
 
   var dataObject = null;
 
@@ -29,7 +29,7 @@ function todoUser($http,$state,$rootScope){
         },
         error: function(userData, errorData) {
         	$rootScope.$apply(function(){
-        		$rootScope.errormsg = errorData.message; 
+        		alertService(errorData.message,'danger',5000); 
         	});
         	
         }
@@ -56,7 +56,7 @@ function todoUser($http,$state,$rootScope){
         },
         error: function(userData, errorData) {
          $rootScope.$apply(function(){
-        		$rootScope.errormsg = errorData.message; 
+        		alertService(errorData.message,'danger',5000); 
         	});
 
            }

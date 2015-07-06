@@ -5,7 +5,7 @@ angular.module('todoapp').run(authService);
 
 function authService($rootScope,$state){
 $rootScope.$on("$stateChangeStart", function(ev, to, toParams, from, fromParams){
-$rootScope.errormsg = "";
+//$rootScope.alert.msg = "";
  var currentUser = Parse.User.current();
 	//$rootScope.logintext ="";
 	//console.log(currentUser);
